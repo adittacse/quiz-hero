@@ -167,9 +167,9 @@ document.querySelector("#submit").addEventListener("click", () => {
             ?.map(
                 (item) => `<div
       class="flex justify-between items-center border rounded p-2 my-2 shadow-sm">
-      <div>${item.marks}/60</div>
-      <div>${item.status}</div>
-      <div>${item.examTime}</div>
+      <div>${item?.marks}/60</div>
+      <div>${item?.status}</div>
+      <div>${item?.examTime}</div>
       </div>`
             )
             ?.join("")}`
