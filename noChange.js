@@ -51,6 +51,12 @@ const displayQuizOptions = (quiz, i) => {
   return generatedOptions;
 };
 
+/**
+  chooseQuiz function receives 2 parameter. One is index of the quiz and another is answer of the quiz.
+  It takes the given answer by user and find the id of the quiz
+  Also takes the correct answer from quiz.json file
+  Finally, called displayAnswers function to display both answer.
+ */
 // select or choose quiz
 const chooseQuiz = (index, givenAns) => {
   const isExist = answers.find((ans) => ans.id === quizData[index].id);
