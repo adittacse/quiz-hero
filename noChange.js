@@ -1,5 +1,11 @@
 // এই পুরো ফাইলে কেও কোন কিছু পরিবর্তন করবেন না । এইখানে কোন Bug নেই ।
 
+/**
+    quizTimer function check the total quiz time of the user.
+    It set to the 60 seconds.
+    That means it checking the quiz is finished within 60 seconds or not.
+    If user took more than 60 seconds, the color of time shown as Red color.
+*/
 // Handle Timer
 const quizTimer = (dismiss) => {
   if (dismiss) {
