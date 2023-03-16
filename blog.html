@@ -7,8 +7,92 @@
 	<meta http-equiv="X-UA-Compatible"
 	      content="ie=edge">
 	<title>Blog</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script>
+		tailwind.config = {
+			theme: {
+				extend: {
+					fontFamily: {
+						common: ["Rubik", "sans-serif"],
+					},
+				},
+			},
+		};
+	</script>
 </head>
-<body>
-
+<body class="font-common">
+	<!-- Header/Navbar section start -->
+	<header class="h-16 flex items-center shadow-sm">
+		<nav class="flex justify-between items-center w-9/12 mx-auto">
+			<div class="text-zinc-800 font-bold uppercase">
+				<h1 class="text-lg">Quiz <span class="text-green-700">HERO</span></h1>
+				<p class="text-[10px] font-normal capitalize -mt-1">
+					Get ready to Quiz and be amazed!
+				</p>
+			</div>
+			<button onclick="homeButtonClicked()"
+			        class="bg-green-600 font-light text-sm px-5 py-1 rounded text-white">Home
+			</button>
+		</nav>
+	</header>
+	
+	<main class="w-9/12 mx-auto mt-7">
+		<section>
+			<div>
+				<h3 class="text-lg font-semibold">1. Difference between map(), filter(), forEach() and
+					find() function</h3>
+				<div class="ml-5">
+					<p class="text-base mt-3"><span class="font-semibold">map() function</span> applies a
+						function over an original array to do the operation of that function by iterating
+						each element of the original array. Finally, it returns a new array as the original
+						array with transformed elements.</p>
+					<p class="text-base mt-3"><span class="font-semibold">filter() function</span> works
+						over an array based on a condition. If the array elements passed the condition then
+						filter() function filtered and returns that elements with creating a new array.</p>
+					<p class="text-base mt-3"><span class="font-semibold">forEach() function</span> can't
+						store in a variable because it returns undefined and doesn't create a new array like
+						map() and filter() function. It iterates each element of an array and executes a
+						function for each element.</p>
+					<p class="text-base mt-3"><span class="font-semibold">find() function</span> find an
+						element	of the array according to the condition but only the first element of that
+						array if the condition is satisfied .</p>
+				</div>
+			</div>
+			<div class="mt-7">
+				<h3 class="text-lg font-semibold">2. Difference between Local Storage, Session Storage
+					and Cookies</h3>
+				<div class="ml-5">
+					<p class="text-base mt-3"><span class="font-semibold">Local Storage</span> is a storage
+						of browser where key and value pairs of data stored in the browser. This data will
+						remain until cleaned. That means no expiration time for the local storage data.
+						Even PC is restarted and browser is closed, the data will still found in the local
+						storage.</p>
+					<p class="text-base mt-3"><span class="font-semibold">Session Storage</span> is almost
+						similar to the local storage. But the data has expiration time. If browser tab is
+						closed, session storage data will remove automatically. It's a temporary storage
+						of the browser.</p>
+					<p class="text-base mt-3"><span class="font-semibold">Cookies</span> are
+						used for storing user preferences, login information, and other session-related data.
+						cookies can be set with an expiration time, after which they get automatically
+						deleted. Cookies can also be set with different security and privacy settings, such
+						as HttpOnly, Secure, SameSite, etc.</p>
+				</div>
+			</div>
+			<div class="mt-7">
+				<h3 class="text-lg font-semibold">3. How does Event Loop works?</h3>
+				<p class="text-base mt-3 ml-5">The event loop is a process that waits for the Call
+					Stack to be clear before pushing callbacks from the Task Queue to the Call Stack.
+					Once the Stack is clear, the event loop triggers and checks the Task Queue for
+					available callbacks. If there are any, it pushes it to the Call Stack, waits
+					for the Call Stack to be clear again, and repeats the same process.</p>
+			</div>
+		</section>
+	</main>
+	
+	<script>
+		function homeButtonClicked() {
+			window.location.href = "index.html";
+		}
+	</script>
 </body>
 </html>

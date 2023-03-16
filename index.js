@@ -187,3 +187,8 @@ document.querySelector("#submit").addEventListener("click", () => {
 document.getElementById("blog").addEventListener("click", function() {
     window.location.href = "blog.html";
 });
+
+// home button clicked
+function homeButtonClicked() {
+    window.location.href = "index.html";
+}
